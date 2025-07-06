@@ -1,0 +1,488 @@
+[
+  {
+    "date": "2025-01-05",
+    "description": "קנייה בסופרמרקט",
+    "creditId": "12345678",
+    "amount": 230.45
+  },
+  {
+    "date": "2025-01-12",
+    "description": "חשבון חשמל",
+    "creditId": "87654321",
+    "amount": 410.20
+  },
+  {
+    "date": "2025-01-20",
+    "description": "דלק לרכב",
+    "creditId": "11223344",
+    "amount": 150.90
+  },
+  {
+    "date": "2025-02-02",
+    "description": "ארנונה",
+    "creditId": "12345678",
+    "amount": 320.00
+  },
+  {
+    "date": "2025-02-09",
+    "description": "קניית ביגוד",
+    "creditId": "87654321",
+    "amount": 275.30
+  },
+  {
+    "date": "2025-02-18",
+    "description": "מסעדה",
+    "creditId": "11223344",
+    "amount": 180.75
+  },
+  {
+    "date": "2025-03-03",
+    "description": "מים",
+    "creditId": "12345678",
+    "amount": 95.60
+  },
+  {
+    "date": "2025-03-11",
+    "description": "מנוי אינטרנט",
+    "creditId": "87654321",
+    "amount": 99.90
+  },
+  {
+    "date": "2025-03-22",
+    "description": "קניות בסופר",
+    "creditId": "11223344",
+    "amount": 245.10
+  },
+  {
+    "date": "2025-04-01",
+    "description": "תחבורה ציבורית",
+    "creditId": "12345678",
+    "amount": 60.00
+  },
+  {
+    "date": "2025-04-10",
+    "description": "ביטוח רכב",
+    "creditId": "87654321",
+    "amount": 1200.00
+  },
+  {
+    "date": "2025-04-19",
+    "description": "קניית מתנות",
+    "creditId": "11223344",
+    "amount": 340.80
+  },
+  {
+    "date": "2025-05-05",
+    "description": "קניות בסופרמרקט",
+    "creditId": "12345678",
+    "amount": 210.35
+  },
+  {
+    "date": "2025-05-15",
+    "description": "חשבון גז",
+    "creditId": "87654321",
+    "amount": 180.00
+  },
+  {
+    "date": "2025-05-27",
+    "description": "בילוי קולנוע",
+    "creditId": "11223344",
+    "amount": 85.00
+  },
+  {
+    "date": "2025-06-04",
+    "description": "קניית ספרים",
+    "creditId": "12345678",
+    "amount": 150.50
+  },
+  {
+    "date": "2025-06-12",
+    "description": "מסעדה",
+    "creditId": "87654321",
+    "amount": 190.25
+  },
+  {
+    "date": "2025-06-23",
+    "description": "דלק לרכב",
+    "creditId": "11223344",
+    "amount": 160.40
+  },
+  {
+    "date": "2025-07-02",
+    "description": "קניות בסופר",
+    "creditId": "12345678",
+    "amount": 255.90
+  },
+  {
+    "date": "2025-07-05",
+    "description": "חשבון חשמל",
+    "creditId": "87654321",
+    "amount": 395.15
+  },
+  {
+    "date": "2025-01-07",
+    "description": "קניית תרופות",
+    "creditId": "11223344",
+    "amount": 45.90
+  },
+  {
+    "date": "2025-01-15",
+    "description": "דמי מנוי חדר כושר",
+    "creditId": "12345678",
+    "amount": 199.00
+  },
+  {
+    "date": "2025-01-22",
+    "description": "מסעדת צהריים",
+    "creditId": "87654321",
+    "amount": 95.30
+  },
+  {
+    "date": "2025-01-29",
+    "description": "כרטיס חניה",
+    "creditId": "11223344",
+    "amount": 25.00
+  },
+  {
+    "date": "2025-02-01",
+    "description": "רכישת אפליקציה",
+    "creditId": "12345678",
+    "amount": 12.00
+  },
+  {
+    "date": "2025-02-05",
+    "description": "חוג יוגה",
+    "creditId": "87654321",
+    "amount": 150.00
+  },
+  {
+    "date": "2025-02-06",
+    "description": "נסיעה במונית",
+    "creditId": "11223344",
+    "amount": 57.80
+  },
+  {
+    "date": "2025-02-14",
+    "description": "סופרמרקט לילה",
+    "creditId": "12345678",
+    "amount": 180.45
+  },
+  {
+    "date": "2025-02-20",
+    "description": "תחנת דלק",
+    "creditId": "87654321",
+    "amount": 148.60
+  },
+  {
+    "date": "2025-02-24",
+    "description": "תשלום ארנונה נוסף",
+    "creditId": "11223344",
+    "amount": 320.00
+  },
+  {
+    "date": "2025-02-28",
+    "description": "כיבוד למשרד",
+    "creditId": "12345678",
+    "amount": 70.20
+  },
+  {
+    "date": "2025-03-01",
+    "description": "מסעדה משפחתית",
+    "creditId": "87654321",
+    "amount": 320.50
+  },
+  {
+    "date": "2025-03-05",
+    "description": "תשלום Netflix",
+    "creditId": "11223344",
+    "amount": 39.90
+  },
+  {
+    "date": "2025-03-09",
+    "description": "תיקון נעליים",
+    "creditId": "12345678",
+    "amount": 55.00
+  },
+  {
+    "date": "2025-03-12",
+    "description": "מוצרי קוסמטיקה",
+    "creditId": "87654321",
+    "amount": 230.45
+  },
+  {
+    "date": "2025-03-14",
+    "description": "מסיבת יום הולדת",
+    "creditId": "11223344",
+    "amount": 260.00
+  },
+  {
+    "date": "2025-03-18",
+    "description": "קניית מתנות",
+    "creditId": "12345678",
+    "amount": 300.00
+  },
+  {
+    "date": "2025-03-26",
+    "description": "ביטוח בריאות",
+    "creditId": "87654321",
+    "amount": 450.00
+  },
+  {
+    "date": "2025-03-30",
+    "description": "ציוד משרדי",
+    "creditId": "11223344",
+    "amount": 110.25
+  },
+  {
+    "date": "2025-04-02",
+    "description": "חוג כדורגל",
+    "creditId": "12345678",
+    "amount": 200.00
+  },
+  {
+    "date": "2025-04-05",
+    "description": "ניקוי יבש",
+    "creditId": "87654321",
+    "amount": 80.60
+  },
+  {
+    "date": "2025-04-07",
+    "description": "קפה ומאפה",
+    "creditId": "11223344",
+    "amount": 28.90
+  },
+  {
+    "date": "2025-04-12",
+    "description": "גן חיות",
+    "creditId": "12345678",
+    "amount": 155.00
+  },
+  {
+    "date": "2025-04-15",
+    "description": "שיפוץ בית",
+    "creditId": "87654321",
+    "amount": 2000.00
+  },
+  {
+    "date": "2025-04-18",
+    "description": "סופרמרקט ערב חג",
+    "creditId": "11223344",
+    "amount": 380.00
+  },
+  {
+    "date": "2025-04-22",
+    "description": "אגרת רכב",
+    "creditId": "12345678",
+    "amount": 450.10
+  },
+  {
+    "date": "2025-04-26",
+    "description": "חומר ניקוי למדיח",
+    "creditId": "87654321",
+    "amount": 60.00
+  },
+  {
+    "date": "2025-04-30",
+    "description": "ספרים לילדים",
+    "creditId": "11223344",
+    "amount": 98.75
+  },
+  {
+    "date": "2025-05-02",
+    "description": "נסיעות רכבת",
+    "creditId": "12345678",
+    "amount": 90.00
+  },
+  {
+    "date": "2025-05-05",
+    "description": "בית קפה",
+    "creditId": "87654321",
+    "amount": 50.20
+  },
+  {
+    "date": "2025-05-08",
+    "description": "תיקון אופניים",
+    "creditId": "11223344",
+    "amount": 120.40
+  },
+  {
+    "date": "2025-05-11",
+    "description": "קניות לחג",
+    "creditId": "12345678",
+    "amount": 400.00
+  },
+  {
+    "date": "2025-05-13",
+    "description": "מספרה",
+    "creditId": "87654321",
+    "amount": 160.00
+  },
+  {
+    "date": "2025-05-17",
+    "description": "אוכל לחיות מחמד",
+    "creditId": "11223344",
+    "amount": 160.30
+  },
+  {
+    "date": "2025-05-21",
+    "description": "כרטיסים להופעה",
+    "creditId": "12345678",
+    "amount": 350.00
+  },
+  {
+    "date": "2025-05-25",
+    "description": "תשלום Spotify",
+    "creditId": "87654321",
+    "amount": 19.90
+  },
+  {
+    "date": "2025-05-29",
+    "description": "פארק שעשועים",
+    "creditId": "11223344",
+    "amount": 280.00
+  },
+  {
+    "date": "2025-06-01",
+    "description": "ציוד קמפינג",
+    "creditId": "12345678",
+    "amount": 450.00
+  },
+  {
+    "date": "2025-06-06",
+    "description": "דלק לרכב",
+    "creditId": "87654321",
+    "amount": 162.40
+  },
+  {
+    "date": "2025-06-08",
+    "description": "שוק איכרים",
+    "creditId": "11223344",
+    "amount": 120.15
+  },
+  {
+    "date": "2025-06-10",
+    "description": "ביטוח דירה",
+    "creditId": "12345678",
+    "amount": 300.00
+  },
+  {
+    "date": "2025-06-14",
+    "description": "מסעדת ערב",
+    "creditId": "87654321",
+    "amount": 210.50
+  },
+  {
+    "date": "2025-06-16",
+    "description": "ביטוח חיים",
+    "creditId": "11223344",
+    "amount": 500.00
+  },
+  {
+    "date": "2025-06-18",
+    "description": "שוקולד",
+    "creditId": "12345678",
+    "amount": 18.90
+  },
+  {
+    "date": "2025-06-20",
+    "description": "כרטיס קולנוע",
+    "creditId": "87654321",
+    "amount": 85.00
+  },
+  {
+    "date": "2025-06-25",
+    "description": "מתנות סוף שנה",
+    "creditId": "11223344",
+    "amount": 300.00
+  },
+  {
+    "date": "2025-06-28",
+    "description": "טיפול שיער",
+    "creditId": "12345678",
+    "amount": 160.00
+  },
+  {
+    "date": "2025-07-06",
+    "description": "קניית משחק וידאו",
+    "creditId": "87654321",
+    "amount": 249.00
+  },
+  {
+    "date": "2025-07-12",
+    "description": "חוג ציור",
+    "creditId": "11223344",
+    "amount": 220.00
+  },
+  {
+    "date": "2025-07-15",
+    "description": "תחנת דלק",
+    "creditId": "12345678",
+    "amount": 165.35
+  },
+  {
+    "date": "2025-07-17",
+    "description": "קניות בסופרמרקט",
+    "creditId": "87654321",
+    "amount": 260.45
+  },
+  {
+    "date": "2025-07-18",
+    "description": "מנוי כבלים",
+    "creditId": "11223344",
+    "amount": 129.00
+  },
+  {
+    "date": "2025-07-20",
+    "description": "תרומה לעמותה",
+    "creditId": "12345678",
+    "amount": 200.00
+  },
+  {
+    "date": "2025-07-22",
+    "description": "מתנות יום הולדת",
+    "creditId": "87654321",
+    "amount": 320.00
+  },
+  {
+    "date": "2025-07-24",
+    "description": "כיבוד לכיתה",
+    "creditId": "11223344",
+    "amount": 75.80
+  },
+  {
+    "date": "2025-07-25",
+    "description": "חשבון חשמל נוסף",
+    "creditId": "12345678",
+    "amount": 405.00
+  },
+  {
+    "date": "2025-07-26",
+    "description": "מים מינרליים",
+    "creditId": "87654321",
+    "amount": 30.50
+  },
+  {
+    "date": "2025-07-27",
+    "description": "ארוחה על הדרך",
+    "creditId": "11223344",
+    "amount": 65.00
+  },
+  {
+    "date": "2025-07-28",
+    "description": "סופרמרקט",
+    "creditId": "12345678",
+    "amount": 270.30
+  },
+  {
+    "date": "2025-07-29",
+    "description": "חידוש רישיון נהיגה",
+    "creditId": "87654321",
+    "amount": 116.80
+  },
+  {
+    "date": "2025-07-30",
+    "description": "קניית פרחים",
+    "creditId": "11223344",
+    "amount": 80.00
+  }
+] 
