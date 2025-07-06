@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import CreditStatDemo from './ComponentsShowcase/CreditStatDemo'
 import ExpenseListDemo from './ComponentsShowcase/ExpenseListDemo'
 import LoanRequestDemo from './ComponentsShowcase/LoanRequestDemo'
+import AiChatDemo from './ComponentsShowcase/AiChatDemo'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -15,7 +16,8 @@ function ComponentsShowcase() {
   const tabs = [
     { id: 'credit', label: 'CreditStat', element: <CreditStatDemo /> },
     { id: 'expense', label: 'ExpenseList', element: <ExpenseListDemo /> },
-    { id: 'loan', label: 'LoanRequest', element: <LoanRequestDemo /> }
+    { id: 'loan', label: 'LoanRequest', element: <LoanRequestDemo /> },
+    { id: 'ai-chat', label: 'AI Chat', element: <AiChatDemo /> }
   ]
 
   return (

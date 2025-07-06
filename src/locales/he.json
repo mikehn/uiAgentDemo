@@ -44,6 +44,23 @@
       "gas": "תדלוק תחנת דלק"
     }
   },
+  "aiChat": {
+    "title": "עוזר צ'אט AI",
+    "placeholder": "הקלד את ההודעה שלך...",
+    "send": "שלח",
+    "clear": "נקה צ'אט",
+    "thinking": "AI חושב...",
+    "configuration": "הגדרות צ'אט AI",
+    "systemPrompt": "הנחיית מערכת",
+    "model": "מודל",
+    "temperature": "טמפרטורה",
+    "maxTokens": "מקסימום טוקנים",
+    "useJsonSchema": "השתמש בתגובת JSON Schema",
+    "jsonSchema": "JSON Schema",
+    "error": "שגיאה",
+    "welcome": "התחל שיחה על ידי הקלדת הודעה למטה",
+    "apiKeyMissing": "מפתח OpenAI API לא מוגדר. אנא הגדר את משתנה הסביבה VITE_OPENAI_API_KEY או REACT_APP_OPENAI_API_KEY."
+  },
   "loanRequest": {
     "title": "הלוואה מהירה למזומן",
     "subtitle": "על איזה סכום חשבתם?",

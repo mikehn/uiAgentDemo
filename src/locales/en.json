@@ -44,6 +44,23 @@
       "gas": "Gas station fuel"
     }
   },
+  "aiChat": {
+    "title": "AI Chat Assistant",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "clear": "Clear Chat",
+    "thinking": "AI is thinking...",
+    "configuration": "AI Chat Configuration",
+    "systemPrompt": "System Prompt",
+    "model": "Model",
+    "temperature": "Temperature",
+    "maxTokens": "Max Tokens",
+    "useJsonSchema": "Use JSON Schema Response",
+    "jsonSchema": "JSON Schema",
+    "error": "Error",
+    "welcome": "Start a conversation by typing a message below",
+    "apiKeyMissing": "OpenAI API key not configured. Please set VITE_OPENAI_API_KEY or REACT_APP_OPENAI_API_KEY environment variable."
+  },
   "loanRequest": {
     "title": "Quick Cash Loan",
     "subtitle": "What amount are you thinking of?",
