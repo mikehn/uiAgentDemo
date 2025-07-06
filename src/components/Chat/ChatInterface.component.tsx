@@ -136,9 +136,9 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
   }
 
   return (
-    <div dir={direction} className={`flex flex-col h-full bg-white/80 backdrop-blur-xl ${className}`.trim()}>
+    <div dir={direction} className={`flex flex-col h-full bg-[#f7faff] backdrop-blur-xl ${className}`.trim()}>
       {/* Chat Header */}
-      <div className="flex items-center justify-between p-6 border-b border-white/20 bg-white/40 backdrop-blur-sm">
+      <div className="flex items-center justify-between p-6 border-b border-white/20" style={{ backgroundColor: '#f7faff' }}>
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
             <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,7 +166,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
       </div>
 
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto p-6 space-y-6 min-h-0 max-w-4xl mx-auto w-full">
+      <div className="flex-1 overflow-y-auto p-6 space-y-6 min-h-0 max-w-4xl mx-auto w-full bg-[#f7faff]">
         {messages.map((message) => (
           <div key={message.id} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-lg ${message.type === 'component' ? 'w-full max-w-none' : ''}`}>
@@ -214,7 +214,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
       </div>
 
       {/* Input Area - Floating */}
-      <div className="p-4">
+      <div className="p-4 bg-[#f7faff]">
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSendMessage} className="relative">
             <input
