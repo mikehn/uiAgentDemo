@@ -213,8 +213,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Area */}
-      <div className="p-4 border-t border-white/20 bg-white/40 backdrop-blur-sm">
+      {/* Input Area - Floating */}
+      <div className="p-4">
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSendMessage} className="relative">
             <input
@@ -224,7 +224,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
               onChange={(e) => setInputValue(e.target.value)}
               placeholder={defaultPlaceholder}
               disabled={isLoading}
-              className={`w-full px-4 py-3 text-base bg-white/80 backdrop-blur-sm border border-white/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed shadow-lg placeholder-gray-500 ${
+              className={`w-full px-4 py-3 text-base bg-white/90 backdrop-blur-sm border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed shadow-xl placeholder-gray-500 ${
                 inputValue.trim() ? 'pr-12' : ''
               }`}
             />
