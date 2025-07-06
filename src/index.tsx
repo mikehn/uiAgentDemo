@@ -11,7 +11,8 @@ const root = createRoot(container)
 
 root.render(
   <I18nextProvider i18n={i18n}>
-    <BrowserRouter>
+    {/* "basename" ensures that routes work when the app is served from a sub-path (e.g., GitHub Pages) */}
+    <BrowserRouter basename="/uiAgentDemo">
       <App />
     </BrowserRouter>
   </I18nextProvider>
