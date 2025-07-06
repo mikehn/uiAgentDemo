@@ -255,7 +255,8 @@ function LoanRequest({ minAmount, maxAmount, sliderStep = 1000, className = '', 
         </div>
       )}
 
-      <style jsx>{`
+      <style>
+        {`
         .slider::-webkit-slider-thumb {
           appearance: none;
           width: 24px;
@@ -274,7 +275,8 @@ function LoanRequest({ minAmount, maxAmount, sliderStep = 1000, className = '', 
           border: none;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-      `}</style>
+        `}
+      </style>
     </div>
   )
 }
