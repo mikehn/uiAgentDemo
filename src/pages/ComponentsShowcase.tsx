@@ -5,6 +5,7 @@ import CreditStatDemo from './ComponentsShowcase/CreditStatDemo'
 import ExpenseListDemo from './ComponentsShowcase/ExpenseListDemo'
 import LoanRequestDemo from './ComponentsShowcase/LoanRequestDemo'
 import AiChatDemo from './ComponentsShowcase/AiChatDemo'
+import CartdStatusDemo from './ComponentsShowcase/CartdStatusDemo'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -17,7 +18,8 @@ function ComponentsShowcase() {
     { id: 'credit', label: 'CreditStat', element: <CreditStatDemo /> },
     { id: 'expense', label: 'ExpenseList', element: <ExpenseListDemo /> },
     { id: 'loan', label: 'LoanRequest', element: <LoanRequestDemo /> },
-    { id: 'ai-chat', label: 'AI Chat', element: <AiChatDemo /> }
+    { id: 'ai-chat', label: 'AI Chat', element: <AiChatDemo /> },
+    { id: 'card-status', label: 'CartdStatus', element: <CartdStatusDemo /> }
   ]
 
   return (
