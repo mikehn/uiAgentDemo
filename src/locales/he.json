@@ -90,5 +90,32 @@
       "subtitle": "הכסף יועבר לחשבונכם תוך 24 שעות",
       "close": "סגירה"
     }
+  },
+  "lostCredit": {
+    "title": "דיווח על כרטיס אבוד או גנוב",
+    "subtitle": "החליקו ובחרו את הכרטיס שברצונכם לדווח עליו",
+    "continue": "המשך",
+    "reasonTitle": "מה קרה?",
+    "reasons": {
+      "lost": "איבדתי את הכרטיס",
+      "stolen": "הכרטיס נגנב",
+      "payments": "אני רואה חיובים שלא ביצעתי"
+    },
+    "confirmTitle": "הדיווח התקבל",
+    "confirmSubtitle": "נחסום את הכרטיס וננפיק כרטיס חלופי בקרוב. נעדכן אתכם בהמשך.",
+    "done": "סיום",
+    "controls": "אפשרויות LostCredit",
+    "cardsToShow": "מספר כרטיסים להצגה"
+  },
+  "info": {
+    "title": "פעולות מהירות",
+    "actions": {
+      "lockCard": "חסם כרטיס",
+      "replaceCard": "החלפת כרטיס",
+      "increaseLimit": "הגדלת מסגרת",
+      "statements": "צפייה בדפי חיוב",
+      "installments": "פריסה לתשלומים",
+      "support": "יצירת קשר"
+    }
   }
 } 

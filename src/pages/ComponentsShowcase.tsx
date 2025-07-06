@@ -6,6 +6,9 @@ import ExpenseListDemo from './ComponentsShowcase/ExpenseListDemo'
 import LoanRequestDemo from './ComponentsShowcase/LoanRequestDemo'
 import AiChatDemo from './ComponentsShowcase/AiChatDemo'
 import CartdStatusDemo from './ComponentsShowcase/CartdStatusDemo'
+// @ts-ignore: extension added for linter path resolution
+import LostCreditDemo from './ComponentsShowcase/LostCreditDemo'
+import InfoDemo from './ComponentsShowcase/InfoDemo'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -19,7 +22,9 @@ function ComponentsShowcase() {
     { id: 'expense', label: 'ExpenseList', element: <ExpenseListDemo /> },
     { id: 'loan', label: 'LoanRequest', element: <LoanRequestDemo /> },
     { id: 'ai-chat', label: 'AI Chat', element: <AiChatDemo /> },
-    { id: 'card-status', label: 'CartdStatus', element: <CartdStatusDemo /> }
+    { id: 'card-status', label: 'CartdStatus', element: <CartdStatusDemo /> },
+    { id: 'lost-credit', label: 'LostCredit', element: <LostCreditDemo /> },
+    { id: 'info', label: 'Info', element: <InfoDemo /> }
   ]
 
   return (

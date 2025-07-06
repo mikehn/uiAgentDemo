@@ -90,5 +90,32 @@
       "subtitle": "The money will be transferred to your account within 24 hours",
       "close": "Close"
     }
+  },
+  "lostCredit": {
+    "title": "Report lost or stolen card",
+    "subtitle": "Swipe and select the card you wish to report",
+    "continue": "Continue",
+    "reasonTitle": "What happened?",
+    "reasons": {
+      "lost": "I lost my card",
+      "stolen": "My card was stolen",
+      "payments": "I see payments I didn't make"
+    },
+    "confirmTitle": "We've got your report",
+    "confirmSubtitle": "We blocked your card and will issue a replacement soon. We'll keep you updated.",
+    "done": "Done",
+    "controls": "LostCredit props",
+    "cardsToShow": "Cards to show"
+  },
+  "info": {
+    "title": "Quick Actions",
+    "actions": {
+      "lockCard": "Lock card",
+      "replaceCard": "Replace card",
+      "increaseLimit": "Increase limit",
+      "statements": "View statements",
+      "installments": "Split to installments",
+      "support": "Contact support"
+    }
   }
 } 
