@@ -1,5 +1,5 @@
 import { aiService } from './Ai.srvice'
-import { SystemPromptKey } from './prompts.lib'
+import { SYSTEM_PROMPTS, SystemPromptKey } from './prompts.lib'
 import { JsonSchemaKey, AgentSelectorResponse } from './jsonSchema.lib'
 
 // Keys used from the libraries – helps avoid typos
@@ -17,8 +17,14 @@ export class AgentSelectorService {
    * @param prompt Natural-language user input
    */
   async select(prompt: string): Promise<AgentSelectorResponse> {
+    // Build dynamic system prompt with today's date in ISO format (YYYY-MM-DD)
+    const today = new Date().toISOString().split('T')[0]
+
+    const dynamicPrompt = `${SYSTEM_PROMPTS[SYSTEM_PROMPT]}\n\nהתאריך היום הוא ${today}.`
+
     const { content } = await aiService.chat(prompt, {
-      systemPrompt: SYSTEM_PROMPT,
+      // Pass full prompt string instead of key so the AI gets the date context
+      systemPrompt: dynamicPrompt,
       jsonSchema: JSON_SCHEMA
     })
 

@@ -8,28 +8,32 @@ function CartdStatusDemo() {
       description: 'קניות בסופר',
       amount: 250.9,
       billedAt: new Date('2024-07-15'),
-      currency: 'ILS'
+      currency: 'ILS',
+      creditId: 'credit-card-4481'
     },
     {
       id: 2,
       description: 'קפה ומאפה',
       amount: 18.5,
       billedAt: new Date('2024-07-18'),
-      currency: 'ILS'
+      currency: 'ILS',
+      creditId: 'credit-card-4481'
     },
     {
       id: 3,
       description: 'Amazon Online',
       amount: 120.99,
       billedAt: new Date('2024-07-20'),
-      currency: 'USD'
+      currency: 'USD',
+      creditId: 'credit-card-4481'
     },
     {
       id: 4,
       description: 'תדלוק תחנת דלק',
       amount: 220,
       billedAt: new Date('2024-07-22'),
-      currency: 'ILS'
+      currency: 'ILS',
+      creditId: 'credit-card-4481'
     }
   ]
 
@@ -42,6 +46,9 @@ function CartdStatusDemo() {
         nextChargeDate={new Date('2024-08-02')}
         creditLimit={12000}
         expenses={expenses}
+        fromDate={new Date('2024-07-01')}
+        toDate={new Date('2024-07-31')}
+        creditId="credit-card-4481"
       />
     </div>
   )

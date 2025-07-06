@@ -13,12 +13,18 @@ export interface CartdStatusProps {
   creditLimit: number
   /** List of expenses used to derive the current debt */
   expenses: Expense[]
+  /** Filter expenses from this date (inclusive) */
+  fromDate?: Date
+  /** Filter expenses to this date (inclusive) */
+  toDate?: Date
+  /** Filter expenses by credit ID */
+  creditId: string
   /** Optional extra className */
   className?: string
 }
 
 /**
- * CartdStatus – combines a credit-card utilisation “stat” with a list of recent expenses.
+ * CartdStatus – combines a credit-card utilisation "stat" with a list of recent expenses.
  *
  * ┌──────────────────────┐
  * │  CreditStat          │
@@ -33,14 +39,36 @@ function CartdStatus({
   nextChargeDate,
   creditLimit,
   expenses,
+  fromDate,
+  toDate,
+  creditId,
   className = ''
 }: CartdStatusProps) {
   const { i18n } = useTranslation()
 
   const direction = i18n.dir()
+  console.log("Date range",fromDate,toDate)
 
-  // Compute current debt from expenses (positive amounts add, negative amounts subtract)
-  const currentDebt = expenses.reduce((sum, { amount }) => sum + amount, 0)
+  // Filter expenses based on date range and credit ID
+  const filteredExpenses = expenses.filter(expense => {
+    // Filter by credit ID
+    if (expense.creditId !== creditId) {
+      return false
+    }
+
+    // Filter by date range
+    if (fromDate && expense.billedAt < fromDate) {
+      return false
+    }
+    if (toDate && expense.billedAt > toDate) {
+      return false
+    }
+
+    return true
+  })
+
+  // Compute current debt from filtered expenses (positive amounts add, negative amounts subtract)
+  const currentDebt = filteredExpenses.reduce((sum, { amount }) => sum + amount, 0)
   // Derive available based on credit limit
   const available = creditLimit - currentDebt
 
@@ -58,7 +86,7 @@ function CartdStatus({
       />
 
       {/* Expenses */}
-      <ExpenseList expenses={expenses} />
+      <ExpenseList expenses={filteredExpenses} />
     </div>
   )
 }

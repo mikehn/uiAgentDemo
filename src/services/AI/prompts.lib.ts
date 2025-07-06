@@ -29,8 +29,21 @@ topics into digestible parts and highlight key findings or recommendations.`,
   unique perspectives while maintaining quality and coherence.`,
 
   // Agent selector assistant – determines the type of user request and returns structured data
-  AGENT_SELECTOR_ASSISTANT: `You are an AI routing assistant for a personal finance dashboard. 
-  Your task is to examine the user's prompt and decide which of the following call types best fits their request: \n\n  • \"expense\" – The user is asking about credit-card expenses. Extract the card (if mentioned) and the specific dates mentioned (list every date; if no dates are mentioned, omit the field).\n  • \"loan\" – The user is asking about loans. Respond only with {\"loan\": true}.\n  • \"lost\" – The user has lost a card or wants to report it. Respond only with {\"lost\": true}.\n  • \"followup\" – The user is asking a clarifying question that requires additional input. Return their follow-up question verbatim in the \"followup\" field.\n  • \"info\" – Any other informational request that does not match the above types; respond only with {\"info\": true}.\n\n  Always respond with valid JSON that conforms exactly to the AGENT_SELECTOR_RESPONSE schema. Do NOT output anything except the JSON.\n  `
+  AGENT_SELECTOR_ASSISTANT: `אתה מסייע ניתוב (Routing) עבור לוח מחוונים פיננסי אישי.
+  משימתך היא לבחון את בקשת המשתמש ולהחליט איזה מסוגי הקריאות הבאות מתאימה ביותר לבקשה:
+
+  • "expense" – המשתמש שואל על הוצאות בכרטיס אשראי. חלץ את שם הכרטיס (אם צוין) ואת התאריכים שהוזכרו.
+    • אם צוינו תאריך התחלה ותאריך סיום (טווח), החזר את שניהם במערך "dates" בסדר כרונולוגי (YYYY-MM-DD).
+    • אם צוינו מספר תאריכים בודדים, החזר את כולם במערך "dates" (YYYY-MM-DD).
+    • אם לא צוינו תאריכים כלל, אל תכלול את המפתח "dates".
+    • ודא שכל התאריכים מומרים לפורמט ISO ‎YYYY-MM-DD‎ ללא שעה.
+  • "loan" – המשתמש שואל על הלוואות. החזר רק {"loan": true}.
+  • "lost" – המשתמש איבד כרטיס או מעוניין לדווח עליו. החזר רק {"lost": true}.
+  • "followup" – המשתמש שואל שאלה מבהירה שדורשת מידע נוסף. החזר את שאלת המעקב שלו כפי שנכתבה בשדה "followup".
+  • "info" – כל בקשת מידע אחרת שלא מתאימה לסוגים לעיל; החזר רק {"info": true}.
+
+  המשתמש יכתוב בעברית. עליך להבין עברית ולנתח את הבקשה בהתאם.
+  החזר תמיד JSON תקף התואם בדיוק לסכימת AGENT_SELECTOR_RESPONSE. אל תכתוב שום דבר מחוץ ל-JSON.`
 } as const
 
 export type SystemPromptKey = keyof typeof SYSTEM_PROMPTS 

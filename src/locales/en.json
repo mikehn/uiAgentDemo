@@ -7,6 +7,18 @@
   "chatDemoDesc": "Interactive chat interface demonstration - Coming soon.",
   "english": "English",
   "hebrew": "עברית",
+  "chat": {
+    "welcome": "Hello! How can I help you with your banking needs today?",
+    "placeholder": "Type your message here...",
+    "error": "Sorry, I encountered an error. Please try again.",
+    "completed": "Task completed successfully! Is there anything else I can help you with?",
+    "title": "Banking Assistant",
+    "typing": "Analyzing your request...",
+    "online": "Ready to help",
+    "thinking": "Analyzing your request...",
+    "bankingWelcome": "Welcome to your Banking Assistant! I can help you with expenses, loans, lost cards, and more. How can I assist you today?",
+    "bankingPlaceholder": "Ask about your expenses, request a loan, report a lost card..."
+  },
   "layout": {
     "back": "Go back",
     "switchLanguage": "Switch language"

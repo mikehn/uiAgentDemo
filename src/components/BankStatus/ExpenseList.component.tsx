@@ -14,7 +14,9 @@ export interface Expense {
   /** ISO 4217 currency code – defaults to ILS (₪) */
   currency?: string
   /** Date the transaction was (or will be) billed */
-  billedAt: Date
+  billedAt: Date,
+
+  creditId: string
 }
 
 export interface ExpenseListProps {
