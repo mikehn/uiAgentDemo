@@ -103,6 +103,54 @@ export const JSON_SCHEMAS = {
     },
     required: ["content"],
     additionalProperties: false
+  },
+
+  // Agent selector response schema – routes user requests to UI components
+  AGENT_SELECTOR_RESPONSE: {
+    type: "object",
+    properties: {
+      callType: {
+        type: "string",
+        enum: ["expense", "loan", "lost", "followup", "info"],
+        description: "Type of action the UI should perform"
+      },
+      expense: {
+        type: "object",
+        properties: {
+          card: {
+            type: "string",
+            description: "Identifier for the card (e.g., last4, brand) to show expenses for"
+          },
+          dates: {
+            type: "array",
+            items: {
+              type: "string",
+              description: "Date in ISO 8601 format (YYYY-MM-DD) for which expenses are requested"
+            },
+            description: "Specific dates requested; if omitted, all dates are implied"
+          }
+        },
+        additionalProperties: false
+      },
+      loan: {
+        type: "boolean",
+        description: "True if the user is asking about loans"
+      },
+      lost: {
+        type: "boolean",
+        description: "True if the user is reporting a lost card"
+      },
+      followup: {
+        type: "string",
+        description: "Clarifying question that should be asked back to the user"
+      },
+      info: {
+        type: "boolean",
+        description: "True if the user is requesting general information"
+      }
+    },
+    required: ["callType"],
+    additionalProperties: false
   }
 } as const
 
@@ -132,4 +180,17 @@ export interface CreativeResponse {
   content: string
   genre?: string
   wordCount?: number
+}
+
+// Agent selector response type
+export interface AgentSelectorResponse {
+  callType: "expense" | "loan" | "lost" | "followup" | "info"
+  expense?: {
+    card?: string
+    dates?: string[]
+  }
+  loan?: boolean
+  lost?: boolean
+  followup?: string
+  info?: boolean
 } 
