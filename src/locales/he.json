@@ -131,5 +131,32 @@
     "thinking": "מנתח את הבקשה שלך...",
     "bankingWelcome": "ברוכים הבאים לעוזר הבנקאי! אני יכול לעזור לך בהוצאות, הלוואות, כרטיסים אבודים ועוד. כיצד אוכל לסייע לך היום?",
     "bankingPlaceholder": "שאל על ההוצאות שלך, בקש הלוואה, דווח על כרטיס אבוד..."
+  },
+  "settings": {
+    "title": "הגדרות",
+    "openaiConfig": "הגדרות OpenAI",
+    "openaiConfigDesc": "נהל את הגדרות מפתח ה-API של OpenAI",
+    "apiKey": "מפתח OpenAI API",
+    "apiKeyPlaceholder": "sk-...",
+    "apiKeyNote": "המפתח שלך נשמר במקומי בדפדפן ואף פעם לא נשלח לשרתים שלנו.",
+    "saveChanges": "שמור שינויים",
+    "clearKey": "נקה מפתח",
+    "apiKeySaved": "המפתח נשמר בהצלחה!",
+    "aboutTitle": "אודות מפתחות OpenAI API",
+    "aboutDesc": "ניתן לקבל מפתח API מפלטפורמת OpenAI. המפתח משמש לאימות בקשות לשירותי OpenAI ולהפעלת פונקציונליות AI בהדגמה זו.",
+    "openaiPlatform": "פלטפורמת OpenAI"
+  },
+  "openaiModal": {
+    "title": "נדרש מפתח OpenAI API",
+    "subtitle": "הפעל פונקציונליות AI",
+    "description": "הדגמה זו דורשת מפתח OpenAI API כדי לפעול. המפתח שלך יישמר בבטחה באחסון המקומי של הדפדפן ויישמש רק לתקשורת עם שירותי OpenAI.",
+    "apiKey": "מפתח API",
+    "apiKeyPlaceholder": "sk-...",
+    "getKeyText": "קבל את המפתח שלך מ",
+    "openaiPlatform": "פלטפורמת OpenAI",
+    "secureTitle": "בטוח ופרטי",
+    "secureDesc": "המפתח נשמר במקומי ואף פעם לא נשלח לשרתים שלנו",
+    "saveKey": "שמור מפתח",
+    "saving": "שומר..."
   }
 } 

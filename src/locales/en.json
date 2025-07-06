@@ -131,5 +131,32 @@
       "installments": "Split to installments",
       "support": "Contact support"
     }
+  },
+  "settings": {
+    "title": "Settings",
+    "openaiConfig": "OpenAI Configuration",
+    "openaiConfigDesc": "Manage your OpenAI API key settings",
+    "apiKey": "OpenAI API Key",
+    "apiKeyPlaceholder": "sk-...",
+    "apiKeyNote": "Your API key is stored locally in your browser and never sent to our servers.",
+    "saveChanges": "Save Changes",
+    "clearKey": "Clear Key",
+    "apiKeySaved": "API key saved successfully!",
+    "aboutTitle": "About OpenAI API Keys",
+    "aboutDesc": "You can obtain an API key from OpenAI's platform. The key is used to authenticate requests to OpenAI's services and enable AI functionality in this demo.",
+    "openaiPlatform": "OpenAI's platform"
+  },
+  "openaiModal": {
+    "title": "OpenAI API Key Required",
+    "subtitle": "Enable AI functionality",
+    "description": "This demo requires an OpenAI API key to function. Your key will be stored securely in your browser's local storage and used only to communicate with OpenAI's services.",
+    "apiKey": "API Key",
+    "apiKeyPlaceholder": "sk-...",
+    "getKeyText": "Get your API key from",
+    "openaiPlatform": "OpenAI's platform",
+    "secureTitle": "Secure & Private",
+    "secureDesc": "Your key is stored locally and never sent to our servers",
+    "saveKey": "Save Key",
+    "saving": "Saving..."
   }
 } 

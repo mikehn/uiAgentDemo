@@ -185,9 +185,14 @@ function AiChatDemo() {
     setError(null)
 
     try {
-      // Check if API key is available
-      if (!import.meta.env.VITE_OPENAI_API_KEY && !import.meta.env.REACT_APP_OPENAI_API_KEY) {
-        throw new Error('OpenAI API key not configured. Please set VITE_OPENAI_API_KEY or REACT_APP_OPENAI_API_KEY environment variable.')
+      // Check if API key is available (env vars or localStorage)
+      const hasApiKey =
+        import.meta.env.VITE_OPENAI_API_KEY ||
+        import.meta.env.REACT_APP_OPENAI_API_KEY ||
+        (typeof window !== 'undefined' && localStorage.getItem('OPENAI_API_KEY'))
+
+      if (!hasApiKey) {
+        throw new Error('OpenAI API key not configured. Please provide a key via the Settings page.')
       }
 
       const response = await aiService.chat(userMessage.content, {

@@ -38,25 +38,43 @@ export interface AIResponse<T = any> {
 }
 
 export class AIService {
-  private openai: OpenAI
+  private openai: OpenAI | null = null
   private defaultConfig: Required<AIConfig>
 
   constructor(config: AIConfig = {}) {
-    // Get API key from environment variables
-    const apiKey = import.meta.env.VITE_OPENAI_API_KEY || import.meta.env.REACT_APP_OPENAI_API_KEY
-    
-    if (!apiKey) {
-      throw new Error(
-        'OpenAI API key not found. Please set VITE_OPENAI_API_KEY or REACT_APP_OPENAI_API_KEY environment variable.'
-      )
+    // Get API key from environment variables or localStorage fallback
+    const apiKey =
+      import.meta.env.VITE_OPENAI_API_KEY ||
+      import.meta.env.REACT_APP_OPENAI_API_KEY ||
+      (typeof window !== 'undefined' ? localStorage.getItem('OPENAI_API_KEY') : '')
+
+    if (apiKey) {
+      this.initOpenAI(apiKey)
+    } else {
+      // Defer initialization until a key is provided via updateApiKey
+      console.warn('OpenAI API key not found. AI functionality will be disabled until a key is provided.')
     }
 
+    this.defaultConfig = { ...DEFAULT_CONFIG, ...config }
+  }
+
+  private initOpenAI(apiKey: string) {
     this.openai = new OpenAI({
       apiKey,
       dangerouslyAllowBrowser: true // Required for browser usage
     })
+  }
 
-    this.defaultConfig = { ...DEFAULT_CONFIG, ...config }
+  /**
+   * Update the API key at runtime – used when the user enters a key via the
+   * Settings page or the initial modal. The key is persisted to localStorage.
+   */
+  updateApiKey(newKey: string) {
+    if (!newKey) return
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('OPENAI_API_KEY', newKey)
+    }
+    this.initOpenAI(newKey)
   }
 
   /**
@@ -66,6 +84,9 @@ export class AIService {
     message: string,
     options: AIRequestOptions = {}
   ): Promise<AIResponse<string>> {
+    if (!this.openai) {
+      throw new Error('OpenAI API key not configured. Please provide one via the Settings page.')
+    }
     const config = { ...this.defaultConfig, ...options.config }
     
     // Build system prompt
@@ -97,7 +118,7 @@ export class AIService {
     }
 
     try {
-      const completion = await this.openai.chat.completions.create(completionParams)
+      const completion = await this.openai!.chat.completions.create(completionParams)
       
       const choice = completion.choices[0]
       const content = choice.message.content || ''
@@ -125,6 +146,9 @@ export class AIService {
     messages: Array<{ role: 'user' | 'assistant', content: string }>,
     options: AIRequestOptions = {}
   ): Promise<AIResponse<string>> {
+    if (!this.openai) {
+      throw new Error('OpenAI API key not configured. Please provide one via the Settings page.')
+    }
     const config = { ...this.defaultConfig, ...options.config }
     
     // Build system prompt
@@ -156,7 +180,7 @@ export class AIService {
     }
 
     try {
-      const completion = await this.openai.chat.completions.create(completionParams)
+      const completion = await this.openai!.chat.completions.create(completionParams)
       
       const choice = completion.choices[0]
       const content = choice.message.content || ''
