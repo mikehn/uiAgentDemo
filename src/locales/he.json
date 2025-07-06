@@ -1,11 +1,16 @@
 {
   "appTitle": "אפליקציית Gen UI",
+  "homeWelcome": "ברוכים הבאים לתצוגת אפליקציית Gen UI. גלו את הרכיבים והתכונות שלנו.",
   "componentsShowcase": "תצוגת רכיבים",
-  "componentsShowcaseDesc": "דף זה יכיל דוגמאות של רכיבי UI.",
+  "componentsShowcaseDesc": "גלו רכיבי UI אינטראקטיביים עם הדגמות חיות ואפשרויות התאמה אישית.",
   "chatDemo": "הדגמת צ'אט",
-  "chatDemoDesc": "ממשק הצ'אט יגיע בקרוב.",
+  "chatDemoDesc": "הדגמת ממשק צ'אט אינטראקטיבי - בקרוב.",
   "english": "אנגלית",
   "hebrew": "עברית",
+  "layout": {
+    "back": "חזור",
+    "switchLanguage": "החלף שפה"
+  },
   "creditStat": {
     "actions": "פעולות",
     "nextChargeIn": "חיוב קרוב ב",

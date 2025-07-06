@@ -1,11 +1,16 @@
 {
   "appTitle": "Gen UI App",
+  "homeWelcome": "Welcome to the Gen UI App showcase. Explore our components and features.",
   "componentsShowcase": "Components Showcase",
-  "componentsShowcaseDesc": "This page will contain examples of UI components.",
+  "componentsShowcaseDesc": "Explore interactive UI components with live demos and customization options.",
   "chatDemo": "Chat Demo",
-  "chatDemoDesc": "Chat interface coming soon.",
+  "chatDemoDesc": "Interactive chat interface demonstration - Coming soon.",
   "english": "English",
   "hebrew": "עברית",
+  "layout": {
+    "back": "Go back",
+    "switchLanguage": "Switch language"
+  },
   "creditStat": {
     "actions": "Actions",
     "nextChargeIn": "Next charge on",

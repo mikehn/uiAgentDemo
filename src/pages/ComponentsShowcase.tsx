@@ -1,5 +1,6 @@
 import { Tab } from '@headlessui/react'
 import { useTranslation } from 'react-i18next'
+import Layout from '../components/Layout'
 import CreditStatDemo from './ComponentsShowcase/CreditStatDemo'
 import ExpenseListDemo from './ComponentsShowcase/ExpenseListDemo'
 import LoanRequestDemo from './ComponentsShowcase/LoanRequestDemo'
@@ -18,40 +19,41 @@ function ComponentsShowcase() {
   ]
 
   return (
-    <div className="p-4 space-y-6">
-      {/* Page header */}
-      <header className="space-y-2">
-        <h2 className="text-3xl font-bold">{t('componentsShowcase')}</h2>
-        <p className="text-gray-600 max-w-2xl">{t('componentsShowcaseDesc')}</p>
-      </header>
+    <Layout title={t('componentsShowcase')}>
+      <div className="space-y-6">
+        {/* Description */}
+        <div className="text-center">
+          <p className="text-gray-600 max-w-2xl mx-auto">{t('componentsShowcaseDesc')}</p>
+        </div>
 
-      <Tab.Group>
-        {/* Mobile-friendly horizontally scrollable tab list */}
-        <Tab.List className="flex gap-2 rounded-xl bg-gray-100 p-1 w-full overflow-x-auto whitespace-nowrap">
-          {tabs.map(({ id, label }) => (
-            <Tab
-              key={id}
-              className={({ selected }) =>
-                classNames(
-                  'px-4 py-2 text-sm font-medium rounded-lg focus:outline-none',
-                  selected ? 'bg-white shadow text-gray-900' : 'text-gray-700 hover:bg-white/[0.6]'
-                )
-              }
-            >
-              {label}
-            </Tab>
-          ))}
-        </Tab.List>
+        <Tab.Group>
+          {/* Mobile-friendly horizontally scrollable tab list */}
+          <Tab.List className="flex gap-2 rounded-xl bg-white p-1 w-full overflow-x-auto whitespace-nowrap shadow-sm border border-gray-200">
+            {tabs.map(({ id, label }) => (
+              <Tab
+                key={id}
+                className={({ selected }) =>
+                  classNames(
+                    'px-4 py-2 text-sm font-medium rounded-lg focus:outline-none transition-colors duration-200',
+                    selected ? 'bg-indigo-600 text-white shadow-sm' : 'text-gray-700 hover:bg-gray-50'
+                  )
+                }
+              >
+                {label}
+              </Tab>
+            ))}
+          </Tab.List>
 
-        <Tab.Panels className="mt-6">
-          {tabs.map(({ id, element }) => (
-            <Tab.Panel key={id} className="focus:outline-none">
-              {element}
-            </Tab.Panel>
-          ))}
-        </Tab.Panels>
-      </Tab.Group>
-    </div>
+          <Tab.Panels className="mt-6">
+            {tabs.map(({ id, element }) => (
+              <Tab.Panel key={id} className="focus:outline-none">
+                {element}
+              </Tab.Panel>
+            ))}
+          </Tab.Panels>
+        </Tab.Group>
+      </div>
+    </Layout>
   )
 }
 
