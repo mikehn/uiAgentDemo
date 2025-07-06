@@ -1,0 +1,74 @@
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import LoanRequest from 'components/LoanRequest/LoanRequst.component'
+
+function LoanRequestControls({
+  minAmount,
+  maxAmount,
+  setMinAmount,
+  setMaxAmount
+}: {
+  minAmount: number
+  maxAmount: number
+  setMinAmount: (v: number) => void
+  setMaxAmount: (v: number) => void
+}) {
+  const { t } = useTranslation()
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-xl font-semibold">{t('loanRequest.controls', 'LoanRequest props')}</h3>
+      <div className="grid gap-4">
+        <label className="flex flex-col text-sm font-medium">
+          Min amount (₪)
+          <input
+            className="rounded border p-2"
+            type="number"
+            step="1000"
+            value={minAmount}
+            onChange={(e) => setMinAmount(parseInt(e.target.value, 10))}
+          />
+        </label>
+
+        <label className="flex flex-col text-sm font-medium">
+          Max amount (₪)
+          <input
+            className="rounded border p-2"
+            type="number"
+            step="1000"
+            value={maxAmount}
+            onChange={(e) => setMaxAmount(parseInt(e.target.value, 10))}
+          />
+        </label>
+      </div>
+    </div>
+  )
+}
+
+function LoanRequestDemo() {
+  const [minAmount, setMinAmount] = useState(5000)
+  const [maxAmount, setMaxAmount] = useState(200000)
+
+  return (
+    <section className="space-y-6">
+      {/* Preview */}
+      <div>
+        <LoanRequest
+          minAmount={minAmount}
+          maxAmount={maxAmount}
+          onSuccess={(amount) => console.log('Loan approved:', amount)}
+        />
+      </div>
+
+      {/* Controls */}
+      <LoanRequestControls
+        minAmount={minAmount}
+        maxAmount={maxAmount}
+        setMinAmount={setMinAmount}
+        setMaxAmount={setMaxAmount}
+      />
+    </section>
+  )
+}
+
+export default LoanRequestDemo 

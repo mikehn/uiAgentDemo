@@ -38,5 +38,35 @@
       "online": "Amazon Online",
       "gas": "Gas station fuel"
     }
+  },
+  "loanRequest": {
+    "title": "Quick Cash Loan",
+    "subtitle": "What amount are you thinking of?",
+    "editable": "We can tailor the best offer for you",
+    "continue": "I've chosen, let's continue",
+    "disclaimer": "Subject to approval and terms of Isracard Mikoum Ltd., failure to repay the loan or Israeli may result in penalty interest charges and enforcement proceedings",
+    "details": {
+      "title": "Loan Details",
+      "amount": "Loan Amount",
+      "monthlyPayment": "Monthly Payment",
+      "period": "Period",
+      "months": "12 months",
+      "interestRate": "Annual Interest Rate",
+      "confirm": "Confirm and Receive Loan"
+    },
+    "pin": {
+      "title": "Enter PIN Code",
+      "subtitle": "For security, please enter your PIN code",
+      "submit": "Confirm"
+    },
+    "loading": {
+      "title": "Processing Request",
+      "subtitle": "Please wait..."
+    },
+    "success": {
+      "title": "Loan Approved!",
+      "subtitle": "The money will be transferred to your account within 24 hours",
+      "close": "Close"
+    }
   }
 } 
