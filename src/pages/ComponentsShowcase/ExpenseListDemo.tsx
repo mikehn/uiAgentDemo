@@ -13,6 +13,7 @@ function ExpenseControls({ addExpense }: { addExpense: (e: Expense) => void }) {
     if (!desc || !amt) return
     addExpense({
       id: Date.now(),
+      creditId: 'demo-card',
       description: desc,
       amount: parseFloat(amt),
       currency: curr,
@@ -88,6 +89,7 @@ function ExpenseListDemo() {
   const [expenses, setExpenses] = useState<Expense[]>([
     {
       id: 1,
+      creditId: 'demo-card',
       description: t('demo.expenses.groceries', 'קניות בסופר'),
       amount: 250.9,
       billedAt: new Date('2024-07-15'),
@@ -95,6 +97,7 @@ function ExpenseListDemo() {
     },
     {
       id: 2,
+      creditId: 'demo-card',
       description: t('demo.expenses.coffee', 'קפה ומאפה'),
       amount: 18.5,
       billedAt: new Date('2024-07-18'),
@@ -102,6 +105,7 @@ function ExpenseListDemo() {
     },
     {
       id: 3,
+      creditId: 'demo-card',
       description: t('demo.expenses.online', 'Amazon Online'),
       amount: 120.99,
       billedAt: new Date('2024-07-20'),
@@ -109,6 +113,7 @@ function ExpenseListDemo() {
     },
     {
       id: 4,
+      creditId: 'demo-card',
       description: t('demo.expenses.gas', 'תדלוק תחנת דלק'),
       amount: 220,
       billedAt: new Date('2024-07-22'),
