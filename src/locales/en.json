@@ -5,5 +5,38 @@
   "chatDemo": "Chat Demo",
   "chatDemoDesc": "Chat interface coming soon.",
   "english": "English",
-  "hebrew": "עברית"
+  "hebrew": "עברית",
+  "creditStat": {
+    "actions": "Actions",
+    "nextChargeIn": "Next charge on",
+    "creditLimitPrefix": "Out of credit limit:",
+    "availablePrefix": "Available balance:"
+  },
+  "cardTypes": {
+    "gold": "Gold",
+    "platinum": "Platinum",
+    "classic": "Classic",
+    "business": "Business"
+  },
+  "cardBrands": {
+    "mastercard": "Mastercard",
+    "visa": "Visa",
+    "americanExpress": "American Express",
+    "isracard": "Isracard"
+  },
+  "expenseList": {
+    "title": "Expense breakdown",
+    "searchPlaceholder": "Search",
+    "subtitle": "Transactions approved but not yet posted in Israel or abroad",
+    "noResults": "No transactions found",
+    "add": "Add"
+  },
+  "demo": {
+    "expenses": {
+      "groceries": "Grocery shopping",
+      "coffee": "Coffee & pastry",
+      "online": "Amazon Online",
+      "gas": "Gas station fuel"
+    }
+  }
 } 
