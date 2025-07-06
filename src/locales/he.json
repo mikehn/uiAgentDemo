@@ -15,7 +15,9 @@
     "actions": "פעולות",
     "nextChargeIn": "חיוב קרוב ב",
     "creditLimitPrefix": "מתוך מסגרת של:",
-    "availablePrefix": "יתרה פנויה:"
+    "availablePrefix": "יתרה פנויה:",
+    "totalAmount": "סה״כ",
+    "billingPeriod": "תקופת חיוב"
   },
   "cardTypes": {
     "gold": "גולד",

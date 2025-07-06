@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 import { agentSelectorService } from '../../services/AI/AgentSelector.service'
 import { AgentSelectorResponse } from '../../services/AI/jsonSchema.lib'
 import ComponentSwitcher from './ComponentSwitcher.component'
@@ -24,6 +25,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
   welcomeMessage 
 }) => {
   const { t, i18n } = useTranslation()
+  const navigate = useNavigate()
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [inputValue, setInputValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -69,7 +71,22 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
     setIsLoading(true)
 
     try {
-      const response = await agentSelectorService.select(inputValue.trim())
+      // Convert chat messages to conversation history format for AI context
+      // Only include user and assistant messages, exclude component messages and welcome message
+      const conversationHistory = messages
+        .filter(msg => 
+          (msg.type === 'user' || msg.type === 'assistant') && 
+          msg.id !== '1' // Exclude welcome message
+        )
+        .map(msg => ({
+          role: msg.type as 'user' | 'assistant',
+          content: msg.content
+        }))
+
+      // Pass conversation context to agent selector for better understanding
+      const response = conversationHistory.length > 0 
+        ? await agentSelectorService.select(inputValue.trim(), conversationHistory)
+        : await agentSelectorService.select(inputValue.trim())
       
       // Add component message
       const componentMessage: ChatMessage = {
@@ -137,7 +154,10 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <button className="p-2 rounded-xl bg-white/50 hover:bg-white/70 transition-colors">
+          <button 
+            onClick={() => navigate('/')}
+            className="p-2 rounded-xl bg-white/50 hover:bg-white/70 transition-colors"
+          >
             <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
             </svg>

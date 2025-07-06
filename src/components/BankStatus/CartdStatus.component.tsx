@@ -83,6 +83,8 @@ function CartdStatus({
         currentDebt={currentDebt}
         creditLimit={creditLimit}
         available={available}
+        from={fromDate}
+        to={toDate}
       />
 
       {/* Expenses */}
