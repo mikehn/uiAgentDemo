@@ -5,13 +5,17 @@ import LoanRequest from 'components/LoanRequest/LoanRequst.component'
 function LoanRequestControls({
   minAmount,
   maxAmount,
+  sliderStep,
   setMinAmount,
-  setMaxAmount
+  setMaxAmount,
+  setSliderStep
 }: {
   minAmount: number
   maxAmount: number
+  sliderStep: number
   setMinAmount: (v: number) => void
   setMaxAmount: (v: number) => void
+  setSliderStep: (v: number) => void
 }) {
   const { t } = useTranslation()
 
@@ -40,6 +44,17 @@ function LoanRequestControls({
             onChange={(e) => setMaxAmount(parseInt(e.target.value, 10))}
           />
         </label>
+
+        <label className="flex flex-col text-sm font-medium">
+          Slider step (₪)
+          <input
+            className="rounded border p-2"
+            type="number"
+            step="1000"
+            value={sliderStep}
+            onChange={(e) => setSliderStep(parseInt(e.target.value, 10))}
+          />
+        </label>
       </div>
     </div>
   )
@@ -48,6 +63,7 @@ function LoanRequestControls({
 function LoanRequestDemo() {
   const [minAmount, setMinAmount] = useState(5000)
   const [maxAmount, setMaxAmount] = useState(200000)
+  const [sliderStep, setSliderStep] = useState(1000)
 
   return (
     <section className="space-y-6">
@@ -56,6 +72,7 @@ function LoanRequestDemo() {
         <LoanRequest
           minAmount={minAmount}
           maxAmount={maxAmount}
+          sliderStep={sliderStep}
           onSuccess={(amount) => console.log('Loan approved:', amount)}
         />
       </div>
@@ -64,8 +81,10 @@ function LoanRequestDemo() {
       <LoanRequestControls
         minAmount={minAmount}
         maxAmount={maxAmount}
+        sliderStep={sliderStep}
         setMinAmount={setMinAmount}
         setMaxAmount={setMaxAmount}
+        setSliderStep={setSliderStep}
       />
     </section>
   )

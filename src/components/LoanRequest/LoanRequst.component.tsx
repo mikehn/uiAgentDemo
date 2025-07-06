@@ -10,14 +10,16 @@ export interface LoanRequestProps {
   className?: string
   /** Callback when loan is successfully approved */
   onSuccess?: (amount: number) => void
+  /** Interval for slider steps */
+  sliderStep?: number
 }
 
 type LoanStep = 'request' | 'details' | 'pin' | 'loading' | 'success'
 
-function LoanRequest({ minAmount, maxAmount, className = '', onSuccess }: LoanRequestProps) {
+function LoanRequest({ minAmount, maxAmount, sliderStep = 1000, className = '', onSuccess }: LoanRequestProps) {
   const { t, i18n } = useTranslation()
   const [step, setStep] = useState<LoanStep>('request')
-  const [loanAmount, setLoanAmount] = useState(minAmount + (maxAmount - minAmount) / 2)
+  const [loanAmount, setLoanAmount] = useState(Math.round((minAmount + (maxAmount - minAmount) / 2) / sliderStep) * sliderStep)
   const [pin, setPin] = useState('')
 
   const direction = i18n.dir()
@@ -98,6 +100,7 @@ function LoanRequest({ minAmount, maxAmount, className = '', onSuccess }: LoanRe
                 max={maxAmount}
                 value={loanAmount}
                 onChange={handleSliderChange}
+                step={sliderStep}
                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                 style={{
                   background: `linear-gradient(to ${isRTL ? 'left' : 'right'}, #f59e0b 0%, #f59e0b ${sliderPercentage}%, #e5e7eb ${sliderPercentage}%, #e5e7eb 100%)`

@@ -18,7 +18,7 @@ function ComponentsShowcase() {
   ]
 
   return (
-    <div className="p-8 space-y-6">
+    <div className="p-4 space-y-6">
       {/* Page header */}
       <header className="space-y-2">
         <h2 className="text-3xl font-bold">{t('componentsShowcase')}</h2>
